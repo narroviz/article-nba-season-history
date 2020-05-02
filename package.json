@@ -8,8 +8,9 @@
     "node": "10.18.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.9.2",
     "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/runtime": "^7.9.2",
+    "enter-view": "^2.0.0",
     "lodash.debounce": "4.0.8",
     "nouislider": "14.1.1",
     "superagent": "5.2.2"
@@ -69,7 +70,7 @@
     "watch:html": "onchange \"src/html/**/*\" \"data/*/\" -- run-s build:html",
     "watch:css": "stylus src/css/config.styl -u autoprefixer-stylus -o dev/bundle.css -m -w",
     "watch:js": "parcel watch src/js/main.js --out-dir dev --no-hmr",
-    "serve": "light-server -q -o -s dev -p 4000 -w \"dev/*.css # # reloadcss\" -w \"dev/*.js # #\" -w \"dev/*.html # #\" -w \"dev/assets/**/* # #\"",
+    "serve": "light-server -q -o -s dev -p 4001 -w \"dev/*.css # # reloadcss\" -w \"dev/*.js # #\" -w \"dev/*.html # #\" -w \"dev/assets/**/* # #\"",
     "dev": "run-p serve watch:*",
     "start": "cross-env NODE_ENV=dev run-s build dev"
   },
