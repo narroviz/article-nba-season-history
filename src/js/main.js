@@ -12,10 +12,10 @@ function resize() {
   // only do resize on width changes, not height
   // (remove the conditional if you want to trigger on height change)
   const width = $body.node().offsetWidth;
-  if (previousWidth !== width) {
+  // if (previousWidth !== width) {
     previousWidth = width;
     graphic.resize();
-  }
+  // }
 }
 
 function setupStickyHeader() {
@@ -37,7 +37,7 @@ function init() {
   // add mobile class to body tag
   $body.classed("is-mobile", isMobile.any());
   // setup resize event
-  window.addEventListener("resize", debounce(resize, 150));
+  window.addEventListener("resize", debounce(resize, 0));
   // setup sticky header menu
   setupStickyHeader();
   // kick off graphic code

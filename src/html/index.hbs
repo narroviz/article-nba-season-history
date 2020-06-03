@@ -20,27 +20,19 @@
 	{{> base/header 'sticky'}}
 
 	<main id='content'>
-
+		<div class='interactive-wrapper' id="interactive-wrapper"></div>
 		<div class='intro'>
-			<h1 class='intro__hed'>WNBA League History</h1>
-			<p class='intro__dek'>The history of the WNBA.</p>
+			<h1 class='intro__hed'>NBA League History</h1>
+			<p class='intro__dek'>A <span class="desktop-text">visual</span> history of the NBA.</p>
 			<p class='intro__byline'>By
-				<a href='http://wanderwhim.com' target='_blank'>
+				<a href='http://dnewcomb.com' target='_blank'>
 					<strong>David Newcomb</strong>
 				</a>
 			</p>
 			<time class='intro__time'>May 2020</time>
 			<div class='intro__prelude'>
-				<p>The Women's National Basketball Association (WNBA) is only the most recent chapter of a history of women's basketball dating back to the 1890's. Building upon several movements and the gains of past leagues, the WNBA has fully established itself as the premier women's basketball league in the U.S. The league continues to build its fan base and work toward a self-sustaining model. For fans who started following the league more recently, like myself, I've put together a brief visual history of the WNBA.</p>
-
-				<h2>1997 - 2000: Houston + Expansion</h2>
-				<p>The WNBA had its inaugural season in 1997, starting with 8 teams and a season of 28 games. In the first few years, the Houston Comets dominated the league with the original Big 3 of Cynthia Cooper, Tina Thompson and Sheryl Swoopes. They won the first 4 WNBA titles, kicking off the league with a full-fledged dynasty. By the end of this era the league had grown to 16 teams and a 30 game schedule.</p>
-
-				<h2>2001 - 2002: LA Sparks</h2>
-				<p>Following the Houston Comets Dynasty was a formidable pair of seasons from the LA Sparks led by WNBA icon Lisa Leslie. </p>
-
-				<h2>2003 - 2009: Detroit Shock + Team Movement</h2>
-				<p>Following the Houston Comets Dynasty was a formidable pair of seasons from the LA Sparks led by WNBA icon Lisa Leslie. </p>
+				<p>The <a href="https://en.wikipedia.org/wiki/National_Basketball_Association">National Basketball Association (NBA)</a> has a long and varied history dating all the way back to 1946. Extraordinary teams and players have come and gone, leaving indelible marks on the history of the league. Though the league is much, much more than the stories of its champions, a history of Finals winners can get you most of the way there. In that spirit, I've compiled a <span class="desktop-text">visual</span> history of the league by tracing through its champions. <span class="desktop-text">If you want to skip down to the fully interactive historical graph, click <a href="#interactive-div">here</a>. Otherwise, scroll below to start exploring!</span><span class="mobile-text">Scroll below to explore! <span style="color: red"><br><br>NOTE: for the complete, visual, interactive version of the article, visit the article on a laptop or desktop.</span></span>
+				<p>
 			</div>
 		</div>
 
@@ -51,60 +43,83 @@
 					<div id="season-history-wrapper" class="season-history-wrapper">
 						<button class="toggle" id="toggle-win-pct">Win Pct.</button>
 						<button class="toggle" id="toggle-num-games">Games Won</button>
-						<h1 class="top-label" id="top-label" style="border-bottom: 2px solid gray"></h1>
-						{{!-- <div class="bottom-text" id="bottom-text"></div> --}}
+						<h1 class="top-label" id="top-label"></h1>
+						<div id="basketball-autocomplete" class="autocomplete">
+			                <input type="text" class="form-control typeahead" id="basketball-team-input">
+			            </div>
+						<div id="tooltip" class="tooltip">
+				            <div class="tooltip-year">
+				                <span id="year"></span>
+				            </div>
+				            <div class="tooltip-record">
+				            	<span id="record-label">Record:&nbsp;</span>
+				                <span id="win-record"></span>
+				                -
+				                <span id="loss-record"></span>
+				            </div>
+				            <div class="tooltip-win-pct">
+				            	<span id="win-pct-label">Win Pct:&nbsp;</span>
+				            	<span id="win-pct"></span>
+				            </div>
+				        </div>
 					</div>
 				</figure>
-
-				<article>
-					<div class='step' data-index='0'></div>
+				<article class='article'>
+					<div class='step-intro' data-index='0'></div>
 					<div class='step' data-index='1'>
 						<img class="large-image" src="../assets/images/logos/NBA/Philadelphia Warriors History.png"></img>
 						<br>
+						<h1 id="header-1"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							In 1947, the <a href="https://en.wikipedia.org/wiki/Golden_State_Warriors#1946%E2%80%931962:_Early_years">Philadelphia Warriors</a> won the 1st championship of what was then called the <a href="https://en.wikipedia.org/wiki/Basketball_Association_of_America">Basketball Association of America (BAA)</a>. <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
 						</p>
 					</div>
 					<div class='step' data-index='2'>
 						<img class="large-image" src="../assets/images/logos/NBA/Baltimore Bullets (Original).png"></img>
 						<br>
+						<h1 id="header-2"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							The <a href="https://en.wikipedia.org/wiki/Baltimore_Bullets_(1944%E2%80%931954)">Baltimore Bullets</a> won a championship in their first year (1948) in the BAA, after joining from the <a href="https://en.wikipedia.org/wiki/American_Basketball_League_(1925%E2%80%931955)">American Basketball League (ABL)</a>. Their time at the top, though, would be short lived. <br><br> After 8 BAA/NBA years, they folded mid-season in 1954. The Bullets name would be resurrected later by what is now the Washington Wizards franchise.
 						</p>
 					</div>
 					<div class='step' data-index='3'>
 						<img class="large-image" src="../assets/images/logos/NBA/Rochester Royals.png"></img>
 						<br>
+						<h1 id="header-3"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							In 1950, the ABL merged with the BAA to form the NBA. The <a href="https://en.wikipedia.org/wiki/Sacramento_Kings#1948%E2%80%931957:_Rochester_Royals">Rochester Royals</a>, a former ABL team, won their only championship a year later in 1951. <br><br> Also in the '50-'51 season, <a href="https://en.wikipedia.org/wiki/Chuck_Cooper_(basketball)">Chuck Cooper<a>, <a href="https://en.wikipedia.org/wiki/Nathaniel_Clifton">Nat Clifton</a> and <a href="https://en.wikipedia.org/wiki/Earl_Lloyd">Earl Lloyd</a> broke the NBA's color barrier. The lily-white league and its fans would struggle poorly with integration in the coming decades.
 						</p>
 					</div>
 					<div class='step' data-index='4'>
 						<img class="large-image" src="../assets/images/logos/NBA/Minneapolis Lakers.png"></img>
 						<br>
+						<h1 id="header-4"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Overshadowing the Royals was the NBA's first true dynasty: the <a href="https://en.wikipedia.org/wiki/Los_Angeles_Lakers#1947%E2%80%931958:_Beginnings_and_Minneapolis_dynasty">Minneapolis Lakers</a>. <br><br> Also a former ABL team, they won a championship in their first NBA year, and didn't look back. Led by Hall of Fame big man <a href="https://en.wikipedia.org/wiki/George_Mikan">George Mikan</a>, the team captured 5 championships in 6 years.<br><br>Despite the Lakers' success, the league as a whole was suffering from a lack of excitement in a relatively stagnant game.
 						</p>
 					</div>
 					<div class='step' data-index='5'>
 						<img class="large-image" src="../assets/images/logos/NBA/Syracuse Nationals.png"></img>
 						<br>
+						<h1 id="header-5"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							By introducing the 24-second shot clock in 1954, <a href="https://en.wikipedia.org/wiki/Daniel_Biasone">Danny Biasone</a> saved the NBA from boredom. He effectively eliminated the woefully slow pace that led to sad final scores like 19-18.<br><br>Biasone was the owner of the <a href="https://en.wikipedia.org/wiki/Philadelphia_76ers#Franchise_history">Syracuse Nationals</a>, and his fast-paced team was an immediate beneficiary of the rule, winning the title that same year.
 						</p>
 					</div>
 					<div class='step' data-index='6'>
 						<img class="large-image" src="../assets/images/logos/NBA/Philadelphia Warriors.png"></img>
 						<br>
+						<h1 id="header-6"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							The continued increase in pace led to a scoring surge and a <a href="https://www.nba.com/history/season-recap/1955-56">99 points per game</a> team scoring average in 1955-'56, up from 79 just two years earlier.<br><br> Nearly a decade after their first championship, the Philly Warriors won again, powered by agile scorer <a href="https://en.wikipedia.org/wiki/Paul_Arizin">Paul Arizin</a>, who had just returned from two years serving in the military.
 						</p>
 					</div>
 					<div class='step' data-index='7'>
 						<img class="large-image" src="../assets/images/logos/NBA/St. Louis Hawks.png"></img>
 						<br>
+						<h1 id="header-7"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							<a href="https://en.wikipedia.org/wiki/Bob_Pettit">Bob Pettit</a> was another big beneficiary of the scoring boom. He won a scoring title in 1955 as a rookie for the <a href="https://en.wikipedia.org/wiki/Atlanta_Hawks#1954%E2%80%931965:_The_Bob_Pettit_era">St. Louis Hawks</a>, and continued an upward trajectory to claim league MVP in 1956 and 1959. <br><br> Thanks to his ascension, the Hawks won a title in 1958, with Pettit dropping 50 in a Finals Game 6 clincher.
 						</p>
 					</div>
 					<div class='step' data-index='8'>
@@ -114,155 +129,177 @@
 							<img class="small-image" src="../assets/images/logos/NBA/Philadelphia 76ers History.png"></img>
 						</div>
 						<br>
+						<h1 id="header-8"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							In his first 10 years in the league, <a href="https://www.basketball-reference.com/players/c/chambwi01.html">Wilt Chamberlain</a> was a dominant individual contributor. In 1961-'62 he dropped <a href="https://en.wikipedia.org/wiki/Wilt_Chamberlain%27s_100-point_game">100 points</a> in a single game, and averaged 50.4 ppg with 25.7 rpg (!). He was laser-focused on individual statistics though, often coming at the expense of team success. <br><br> During this time, he played for the Philadelphia Warriors, the <a href="https://en.wikipedia.org/wiki/Golden_State_Warriors#1959%E2%80%931965:_The_Wilt_Chamberlain_era">San Francisco Warriors</a> and the <a href="https://en.wikipedia.org/wiki/Philadelphia_76ers#1964%E2%80%931967:_The_Wilt_Chamberlain_era">Philadelphia 76ers</a>. He was only part of one truly great team with the 76ers in 1967, when he captured his first championship.<br><br>He would continue his career the next half-decade with the Lakers and claim one more championship with an incredible Los Angeles Lakers team.
 						</p>
 					</div>
 					<div class='step' data-index='9'>
 						<img class="large-image" src="../assets/images/logos/NBA/Boston Celtics 60s.png"></img>
 						<br>
+						<h1 id="header-9"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							When looking across the breadth of Wilt's accomplishments, "number of championships" is the only one that underwhelms. And it's for one reason: <a href="https://en.wikipedia.org/wiki/Bill_Russell">Bill Russell</a>. All the missing championships from 1957 to 1969 were captured by a legendary <a href="https://www.basketball-reference.com/teams/BOS/">Boston Celtics</a> dynasty.<br><br>This dynasty spanned the full career of defensive stalwart and team-focused big man, Bill Russell. He stifled Wilt the Stilt for a decade straight and grew into the definitive measure of NBA success.<br><br>Not only could Russell play the game at an incredible individual level, but he could also consistently elevate the level of those around him. No doubt, he had excellent teammates like <a href="https://en.wikipedia.org/wiki/Bob_Cousy">Bob Cousy</a>, and a legendary head in <a href="https://en.wikipedia.org/wiki/Red_Auerbach">Red Auerbach</a>, but Russell was the constant.<br><br>Yet after Cousy retired in 1963, Russell would win another 5 championships. After Auerbach retired in 1966, Russell simply replaced him as head coach, while continuing to play! Breaking barriers, he became the NBA's first African American coach, and then went on to win 2 more titles as a player-coach. Unbelievable.<br><br>In total, Russell and the Celtics won 11 rings in 13 seasons. That's an 84.6% title win percentage. Michael Jordan couldn't even make free throws (<a href="https://www.basketball-reference.com/players/j/jordami01.html">83.5%</a>) at the same rate that Russell won titles! The man was a fierce competitor and a model of consistency, resulting in one of the greatest dynasties in all of sports.<br><br>Sadly, his basketball career (and the careers of all other non-white players of the era) was marked by <a href="https://en.wikipedia.org/wiki/Bill_Russell#Racist_abuse,_controversy,_and_relationship_with_Boston_fans">virulent racism</a>, particularly in <a href="https://theundefeated.com/features/celtics-being-a-black-player-in-boston/">Boston</a>. He was and is a politically active advocate for equality, speaking out frequently against injustice. It would take many, many decades for the NBA to repair its relationship with Russell.<br><br>In 2009, the league renamed the Finals MVP Award to the <a href="https://en.wikipedia.org/wiki/NBA_Finals_Most_Valuable_Player_Award">Bill Russell NBA Finals MVP Award</a>, and since then, Russell has become a fixture of the Finals. He presents the trophy to the victor, passing on the torch to the next generation's elite.
 						</p>
 					</div>
 					<div class='step' data-index='10'>
 						<img class="large-image" src="../assets/images/logos/NBA/New York Knicks 70s.png"></img>
 						<br>
+						<h1 id="header-10"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Russell's retirement in 1969 left a void for teams to fill. Amongst the first teams to step in was the <a href="https://www.basketball-reference.com/teams/NYK/">New York Knicks</a>. <br><br> The 1970 team was propelled by MVP <a href="https://en.wikipedia.org/wiki/Willis_Reed">Willis Reed</a> and coach <a href="https://en.wikipedia.org/wiki/Red_Holzman">Red Holzman</a> to a post-season where they defeated <a href="https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar">Kareem Abdul-Jabbar</a> (then Lew Alcindor) of the ascendant Milwaukee Bucks and <a href="https://en.wikipedia.org/wiki/Jerry_West">Jerry West</a> of the Lakers. <br><br> The Knicks would remain in contention the following years with the same core, rising to their second and, sadly, most recent, franchise championship in 1973.
 						</p>
 					</div>
 					<div class='step' data-index='11'>
 						<img class="large-image" src="../assets/images/logos/NBA/Milwaukee Bucks 70s.png"></img>
 						<br>
+						<h1 id="header-11"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							After striking gold by drafting Kareem Abdul-Jabbar in 1969, the <a href="https://www.basketball-reference.com/teams/MIL/">Bucks</a> won again by trading for <a href="https://en.wikipedia.org/wiki/Oscar_Robertson">Oscar Robertson</a> in 1970. By this point, Oscar had been an MVP and averaged a triple-double for the <a href="https://en.wikipedia.org/wiki/Sacramento_Kings#1957%E2%80%931972:_Cincinnati_Royals">Cincinnati Royals</a>. <br><br> He was exactly the spark the young franchise needed, and they won a championship that same year. They'd also make the Finals in 1974, Robertson's last year, but lose to a tough Celtics team.<br><br>Soon after Oscar's retirement, Kareem requested a trade to either NYC or LA. His primary reason was that the Midwest did not meet his cultural needs: a nice way of saying the city would not accept a politically active, outspoken black man who had converted to Islam.
 						</p>
 					</div>
 					<div class='step' data-index='12'>
 						<img class="large-image" src="../assets/images/logos/NBA/Los Angeles Lakers 70s.png"></img>
 						<br>
+						<h1 id="header-12"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							During this same time, a Los Angeles Lakers team with a formidable core of Jerry West and Wilt Chamberlain finally made it to the mountaintop. In a groundbreaking regular season, the <a href="https://en.wikipedia.org/wiki/1971%E2%80%9372_Los_Angeles_Lakers_season">1971-'72 Lakers</a> notched record after record on the way to a title.<br><br>They won <a href="https://en.wikipedia.org/wiki/List_of_National_Basketball_Association_longest_winning_streaks">33 games</a> in a row, which is still the longest streak in NBA history. They won 69 games, a record that would stand for 25 years. And most importantly, Jerry West won his first title, snapping a Bill Russell-caused streak of 7 Finals lost.<br><br>In 1973, the Lakers would also reach the Finals, losing to the Knicks in 4 games. After that Finals, Wilt retired and West retired the year after.
 						</p>
 					</div>
 					<div class='step' data-index='13'>
-						<img class="large-image" src="../assets/images/logos/NBA/Boston Celtics 70s.png"></img>
+						<img class="large-image" src="../assets/images/logos/NBA/Golden State Warriors 70s.png"></img>
 						<br>
+						<h1 id="header-13"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Also out on the West Coast, the <a href="https://en.wikipedia.org/wiki/Rick_Barry">Rick Barry</a>-led Golden State Warriors were putting together what he would call a "fairy-tale season." With West and Robertson both retired, there was strong opportunity for a new champion.<br><br> In the 1975 post-season, the 60-win Washington Bullets dispatched the Celtics and appeared poised to take down the overmatched 48-win Warriors in the Finals. <br><br> Nevertheless, behind an excellent Rick Barry Finals performance, the Warriors stunned the Bullets with a 4-game sweep.
 						</p>
 					</div>
 					<div class='step' data-index='14'>
-						<img class="large-image" src="../assets/images/logos/NBA/Golden State Warriors 70s.png"></img>
+						<img class="large-image" src="../assets/images/logos/NBA/Boston Celtics 70s.png"></img>
 						<br>
+						<h1 id="header-14"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							A precursor to the Celtics' success of the 80's, the 70's team oscillated in and out of title contention. For a 4-year stretch, With Hall of Fame players <a href="https://en.wikipedia.org/wiki/John_Havlicek">John Havlicek</a> and <a href="https://en.wikipedia.org/wiki/Dave_Cowens">Dave Cowens</a> leading the way, they were strong contenders and won 2 titles in 1974 and 1976.<br><br>Also during their 1975-'76 title season, merger talks with the <a href="https://en.wikipedia.org/wiki/American_Basketball_Association">American Basketball Association (ABA)</a> were nearing a successful close. The ultimate merger would, for a brief stretch, challenge the traditional power franchises in the NBA, including the Celtics and Lakers.
 						</p>
 					</div>
 					<div class='step' data-index='15'>
 						<img class="large-image" src="../assets/images/logos/NBA/Philadelphia 76ers.png"></img>
 						<br>
+						<h1 id="header-15"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							The 1976-'77 season marked the first post-merger season for the new NBA. At this point, there were 22 teams, with 4 new franchises from the ABA: the Denver Nuggets, New York Nets, Indiana Pacers, and <a href="https://en.wikipedia.org/wiki/San_Antonio_Spurs#1976%E2%80%931985:_The_George_Gervin_era">San Antonio Spurs</a>. The Spurs would kick off a perennially strong franchise with <a href="https://en.wikipedia.org/wiki/George_Gervin">George Gervin</a>, though the Nuggets and Nets would struggle to find footing.<br><br> The centerpiece of the merger from a business and basketball standpoint, though, was <a href="https://en.wikipedia.org/wiki/Julius_Erving">Julius Erving</a>, aka Dr. J. His revolutionary style turned the game vertical with high flying dunks and flair.<br><br> He's the father of the <a href="https://www.youtube.com/watch?v=0Cdy_JP13NE">free throw line dunk</a>, had the <a href="https://www.youtube.com/watch?v=ZhdGihdnSKQ">nastiest baseline scoop</a> of all time, and slammed home the iconic <a href="https://www.youtube.com/watch?v=SrlBgLdGKZM">rock-the-baby</a> dunk. His creativity with the game propelled a direct path through Magic and MJ to the modern NBA.<br><br>Further, even in a time of racial animosity, when white fans and owners were worrying the league was becoming "too black", he immediately became a fan favorite across the league.<br><br>In Dr. J's first NBA season, he made the Finals with the 76ers, and he would make the Finals again in 1980. Finally, he'd win a title in 1983 with the ascent of Hall of Fame and MVP teammate <a href="https://en.wikipedia.org/wiki/Moses_Malone">Moses Malone</a>.
 						</p>
 					</div>
 					<div class='step' data-index='16'>
 						<img class="large-image" src="../assets/images/logos/NBA/Portland Trail Blazers 70s.png"></img>
 						<br>
+						<h1 id="header-16"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Taking down Dr. J in his first NBA Finals appearance in 1977 was the unlikely <a href="https://en.wikipedia.org/wiki/Portland_Trail_Blazers">Portland Trail Blazers</a>. Their team had crucially acquired <a href="https://en.wikipedia.org/wiki/Maurice_Lucas">Maurice Lucas</a> from the ABA and was led by center <a href="https://en.wikipedia.org/wiki/Bill_Walton">Bill Walton</a>. After falling behind 2-0, they stormed back to 4 straight wins, earning the sharpshooting nickname of "Rip City" (rrrrip = sound of nothing but net).<br><br> The following year, the Blazers would start the season 50-10, appearing to be on their way to a top 10 NBA season. However, in that 60th game, Bill Walton broke his foot. He was able to come back for the Conference Finals that year, but re-broke the foot in game 2, and the Blazers lost the series in 6.
 						</p>
 					</div>
 					<div class='step' data-index='17'>
 						<img class="large-image" src="../assets/images/logos/NBA/Washington Bullets 70s.png"></img>
 						<br>
+						<h1 id="header-17"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							After several years of contention, the <a href="https://en.wikipedia.org/wiki/Washington_Wizards#1977%E2%80%9378_Championship_season">Washington Bullets</a> finally got their first Finals win in 1978. The team featured 10-time All-Star <a href="https://en.wikipedia.org/wiki/Elvin_Hayes">Elvin Hayes</a> and defeated the Seattle SuperSonics in a tight 7 game series.<br><br> The season was marred, however, by brawls breaking out mid-game. In one fight, league star Kareem Abdul-Jabbar <a href="https://www.nba.com/history/season-recap/1978-79">punched</a> Bucks' rookie Kent Benson, breaking his hand in the process and missing 20 games.
 						</p>
 					</div>
 					<div class='step' data-index='18'>
 						<img class="large-image" src="../assets/images/logos/NBA/Seattle Supersonics 70s.png"></img>
 						<br>
+						<h1 id="header-18"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							In 1979, the <a href="https://en.wikipedia.org/wiki/1977%E2%80%9378_Seattle_SuperSonics_season">Seattle SuperSonics</a> made their way back to the NBA Finals, where they would avenge the previous year's loss by beating the Bullets in 5.<br><br> The league at the time, however was continuing to suffer: they had tape-delayed games for fear of fights breaking out, cocaine was a full-fledged problem the league insufficiently combated, and fights continued.
 						</p>
 					</div>
 					<div class='step' data-index='19'>
 						<img class="large-image" src="../assets/images/logos/NBA/Boston Celtics 80s.png"></img>
 						<br>
+						<h1 id="header-19"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							At this low point, came the resurgence of two of the most storied franchises, with fresh faces that helped redefine the league. It should also be noted that the league was trying to change the game itself, introducing the <a href="https://www.nba.com/history/season-recap/1979-80">3-point line</a> in 1980 as well. <br><br><a href="https://en.wikipedia.org/wiki/Larry_Bird">Larry Bird</a> joined the Boston Celtics in 1980, immediately turning the franchise into a contender. Larry Bird's arrival to the scene turned into 4 Finals appearances, culminating in 3 titles, a bitter rivalry with the Los Angeles Lakers, and multiple defeats of the young Michael Jordan-led Bulls.<br><br>Bird himself was a sharpshooting big man, pioneering the <a href="https://en.wikipedia.org/wiki/50%E2%80%9340%E2%80%9390_club">50-40-90 club</a>, and paving the way for later iterations like Dirk Nowitzki and Kevin Durant.
 						</p>
 					</div>
 					<div class='step' data-index='20'>
 						<img class="large-image" src="../assets/images/logos/NBA/Los Angeles Lakers 70s.png"></img>
 						<br>
+						<h1 id="header-20"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							The same year Bird joined the Celtics, <a href="https://en.wikipedia.org/wiki/Magic_Johnson">Magic Johnson</a> joined the Lakers. Pairing him up with Kareem and another Hall of Famer in <a href="https://en.wikipedia.org/wiki/James_Worthy">James Worthy</a> created a dynasty that finally had the upper hand over the Celtics. In 1984, after the Lakers franchise had lost 8 times in the Finals to the Celtics, the Lakers finally beat them 4 - 2.<br><br> This dynastic team won 5 championships and competed in 9 of the 12 Finals between 1980 and 1991. Kareem became the all-time NBA scoring leader during this time, and Magic redefined the forward position as a <a href="https://www.youtube.com/watch?v=2xYWA9uMSuA">6'9" wunderkind</a>. He could pass with the agility of a point guard and score down low with the strength and skill of a center. He was the precursor to the positionless NBA we have today.
 						</p>
 					</div>
 					<div class='step' data-index='21'>
 						<img class="large-image" src="../assets/images/logos/NBA/Detroit Pistons 80s.png"></img>
 						<br>
+						<h1 id="header-21"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Though the Lakers and Celtics 7 of the 10 titles in the 80's, there was one often overlooked team that overtook those dynasties: the <a href="https://en.wikipedia.org/wiki/Detroit_Pistons#1980%E2%80%931991:_The_%22Bad_Boys%22_era">Bad Boy Pistons</a>.<br><br> Led by <a href="https://en.wikipedia.org/wiki/Isiah_Thomas">Isiah Thomas</a>, <a href="https://en.wikipedia.org/wiki/Bill_Laimbeer">Bill Laimbeer</a> and <a href="https://en.wikipedia.org/wiki/Dennis_Rodman">Dennis Rodman</a>, this team won back-to-back championships in 1988 and 1989. They played an intentionally violent style intended to throw the other team off their game.<br><br>They were hated for this physicality and they resented the savior label placed on the Larry Bird, Magic Johnson and Michael Jordan. They played the angry underdog role, and it fueled them to an impressive championship run in one of the most competitive eras of the NBA.
 						</p>
 					</div>
 					<div class='step' data-index='22'>
 						<img class="large-image" src="../assets/images/logos/NBA/Chicago Bulls.png"></img>
 						<br>
+						<h1 id="header-22"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							A singular force of nature, a relentless competitor, the championship-winning <a href="https://en.wikipedia.org/wiki/Michael_Jordan">Michael Jordan</a> would be forged in 1980s playoff battles with the Celtics, Lakers, and Pistons. He would rise to each challenge, defeating all of these franchises in the years leading up to the Bulls first <a href="https://en.wikipedia.org/wiki/Three-peat#National_Basketball_Association_(NBA_Finals)">three-peat</a> starting in 1991.<br><br>The characters in the story are known to all: <a href="https://en.wikipedia.org/wiki/Phil_Jackson#Chicago_Bulls_(1987%E2%80%931998)">Phil Jackson</a>, <a href="https://en.wikipedia.org/wiki/Scottie_Pippen">Scottie Pippen</a>, <a href="https://en.wikipedia.org/wiki/Steve_Kerr">Steve Kerr</a>, Dennis Rodman. They were all crucial in their own way to Jordan's ascension. But nobody played the game like Mike. No one commanded the room like he did. <br><br> Nobody, not even Dr. J, <a href="https://www.youtube.com/watch?v=JzK3eP-jYpc">walked in the air</a> like he did. The number of <a href="https://www.youtube.com/watch?v=QWErLaJgx0k">iconic shots</a>, performances, and <a href="https://www.youtube.com/watch?v=EwfW3NxN2qA">dunks</a> is too high to list here. He defeated every big star of the 80s and 90s, leaving no air in the room for anyone else. <br><br>Bird and the Celtics? Done. Isiah and the Pistons? Done. Magic and the Lakers? Done. <a href="https://en.wikipedia.org/wiki/Charles_Barkley">Barkley</a> and the Suns? Done. <a href="https://en.wikipedia.org/wiki/Patrick_Ewing">Ewing</a> and the Knicks? Done. <a href="https://en.wikipedia.org/wiki/Karl_Malone">Malone</a> and the Jazz? Done. At his peak, he could not and would not be beat.<br><br>Only the 2 years when he stepped away from the Bulls could break his championship streak of the 90s. And when he returned, he soon found his legs, powering the team to a second three-peat starting in 1996.<br><br>The legend of MJ and this team only continues to grow with <a href="https://en.wikipedia.org/wiki/The_Last_Dance_(TV_series)">The Last Dance</a> series. It's a fascinating window into the forces keeping that last 1997-'98 team together and revealing what tanked the franchise and forced peak Jordan into retirement.
 						</p>
 					</div>
 					<div class='step' data-index='23'>
 						<img class="large-image" src="../assets/images/logos/NBA/Houston Rockets 90s.png"></img>
 						<br>
+						<h1 id="header-23"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							In the brief mid 90s window when Jordan stepped away from basketball, no team took advantage quite like the <a href="https://en.wikipedia.org/wiki/Houston_Rockets#1993%E2%80%931995:_Back-to-Back_Championships_for_Clutch_City">Houston Rockets</a>. They were a prodigious team in their own right, led by <a href="https://en.wikipedia.org/wiki/Hakeem_Olajuwon">Hakeem Olajuwon</a>, the greatest foreign-born player.<br><br> Hakeem had gone to the finals in 1986, but lost to the Celtics. This time around, with fellow All-Star <a href="https://en.wikipedia.org/wiki/Clyde_Drexler">Clyde Drexler</a>, the Rockets won back-to-back championships in '94 and '95. As a historical side note, these were also the first 2 of 7 championships to be won be prodigious role player <a href="https://en.wikipedia.org/wiki/Robert_Horry">Robert "Big Shot Rob" Horry</a>. 
 						</p>
 					</div>
 					<div class='step' data-index='24'>
 						<img class="large-image" src="../assets/images/logos/NBA/San Antonio Spurs.png"></img>
 						<br>
+						<h1 id="header-24"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Following the Bulls' second three-peat and immediate collapse, two teams in the Western Conference would form dynasties running throughout the next 10-15 years. Led by <a href="https://en.wikipedia.org/wiki/Tim_Duncan">Tim Duncan</a>, the San Antonio Spurs established themselves as the premier team and premier team-culture of the era.<br><br> Kicking off a run of 20 consecutive playoffs for the franchise, Tim Duncan and <a href="https://en.wikipedia.org/wiki/David_Robinson">David Robinson</a> won a championship in 1999. The infusion of foreign talent from <a href="https://en.wikipedia.org/wiki/Tony_Parker">Tony Parker</a> (France) and <a href="https://en.wikipedia.org/wiki/Manu_Gin%C3%B3bili">Manu Ginóbili</a> (Argentina) helped capture another three titles in 2003 (Robinson's last year), 2005 and 2007.<br><br>This trio led by Duncan would contend for many years, but wouldn't reach the Finals again until 2013. With the ascension of a young <a href="https://en.wikipedia.org/wiki/Kawhi_Leonard#San_Antonio_Spurs">Kawhi Leonard</a>, the Spurs won again in 2014, effectively ending the attempted dynasty of LeBron James and the Miami Heat.
 						</p>
 					</div>
 					<div class='step' data-index='25'>
 						<img class="large-image" src="../assets/images/logos/NBA/Los Angeles Lakers.png"></img>
 						<br>
+						<h1 id="header-25"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Contemporaneously, two separate iterations of <a href="https://en.wikipedia.org/wiki/Kobe_Bryant">Kobe Bryant</a> would help the Lakers to 5 championships between 2000 and 2010. The first 3 championships were a tour de force from an unquestionably dominant <a href="https://en.wikipedia.org/wiki/Shaquille_O%27Neal">Shaq</a>, coached by the steady Phil Jackson. By the third championship, fissures were fully forming as young Kobe increasingly demanded more and more of the offense run through him.<br><br> Kobe's ego ultimately drove Shaq out of town, collapsing a potentially historic dynasty before it could fully get off the ground. In 2008, though, Kobe would get back to the Finals with the help of Pau Gasol and Phil Jackson coaching the team again. Though they lost that year to the Celtics, they won back-to-back championships in 2009 and avenged their Celtics loss in 2010.
 						</p>
 					</div>
 					<div class='step' data-index='26'>
 						<img class="large-image" src="../assets/images/logos/NBA/Dallas Mavericks 00s.png"></img>
 						<br>
+						<h1 id="header-26"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							From 1999 to 2011, the Spurs and Lakers appeared in 11 of the 13 championships, winning a combined 9 of them. The only other Western Conference team to make the Finals during this time was the <a href="https://en.wikipedia.org/wiki/Dallas_Mavericks">Dallas Mavericks</a>, led by <a href="https://en.wikipedia.org/wiki/Dirk_Nowitzki">Dirk Nowitzki</a>.<br><br>In 2006, the Mavs went up 2-0 in the Finals, then collapsed to a talented Miami Heat team. It would take Dirk until the 2011 playoffs to reach the Finals again.<br><br>Ripping through the defending champion Lakers and the <a href="https://en.wikipedia.org/wiki/Oklahoma_City_Thunder#2009%E2%80%932012:_Rise_to_contention_and_first_Finals_appearance">Durant-Westbrook-Harden Thunder</a>, the Mavs reached the Finals against none other than the Miami Heat.<br><br>Dirk led the underdog Mavs to an astonishing 4-2 defeat of the <a href="https://en.wikipedia.org/wiki/Big_Three_(Miami_Heat)">LeBron-Wade-Bosh Heat</a>, then in their first year together. Dirk's Finals victory would immediately reverse a career-long label as "not-quite-good-enough", and would cement his place amongst the <a href="https://www.youtube.com/watch?v=lP_WRS7hU-k">NBA's greats</a>.
 						</p>
 					</div>
 					<div class='step' data-index='27'>
 						<img class="large-image" src="../assets/images/logos/NBA/Detroit Pistons.png"></img>
 						<br>
+						<h1 id="header-27"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Not to be overlooked during the Western Conference reign of power were several excellent teams that broke through the West's stranglehold. First in the era was the <a href="https://en.wikipedia.org/wiki/Detroit_Pistons#2003%E2%80%932008:_Six_consecutive_Eastern_Conference_Finals">Detroit Pistons</a>, another paradigm of team basketball. With <a href="https://en.wikipedia.org/wiki/Chauncey_Billups">Chauncey Billups</a>, <a href="https://en.wikipedia.org/wiki/Rasheed_Wallace">Rasheed Wallace</a>, <a href="https://en.wikipedia.org/wiki/Ben_Wallace">Ben Wallace</a>, <a href="https://en.wikipedia.org/wiki/Richard_Hamilton_(basketball)">RIP Hamilton</a>, and <a href="https://en.wikipedia.org/wiki/Tayshaun_Prince">Tayshaun Prince</a>, that team put together a defense that wouldn't let you move.<br><br>They made back to back Finals appearances in 2004 and 2005, beating the waning, dysfunctional Shaq &amp; Kobe Lakers in 2004.
 						</p>
 					</div>
 					<div class='step' data-index='28'>
 						<img class="large-image" src="../assets/images/logos/NBA/Miami Heat.png"></img>
 						<br>
+						<h1 id="header-28"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							Alluded to in the Mavs section, the 2006 Heat were a great combination of experience and youth. <a href="https://en.wikipedia.org/wiki/Dwyane_Wade">Dwyane Wade</a> turned in an iconic Finals performance in just his third year in the league, notching 34.7 ppg.<br><br>Coached by <a href="https://en.wikipedia.org/wiki/Pat_Riley#Miami_Heat">Pat Riley</a>, and helped along by an aging but still powerful Shaq, the team never gave up on themselves. They fell behind 2 - 0, and then rallied to win 4 straight, reversing their fortunes and establishing Miami as an alluring franchise on the rise.
 						</p>
 					</div>
 					<div class='step' data-index='29'>
 						<img class="large-image" src="../assets/images/logos/NBA/Boston Celtics.png"></img>
 						<br>
+						<h1 id="header-29"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							The third team in the East that broke through was the <a href="https://en.wikipedia.org/wiki/2007%E2%80%9308_Boston_Celtics_season">2008 Celtics</a>. This team was a rare example of a team coming together overnight, and immediately understanding <a href="https://hbr.org/2008/06/why-the-celtics-wonlessons-fro">how to sacrifice</a> for the benefit of all. Historically, a Big Three of <a href="https://en.wikipedia.org/wiki/Kevin_Garnett">Kevin Garnett</a>, <a href="https://en.wikipedia.org/wiki/Paul_Pierce">Paul Pierce</a> and <a href="https://en.wikipedia.org/wiki/Ray_Allen">Ray Allen</a> came together in 2008 for a historic run to the Finals.<br><br>The Celtics managed an immediate 42-game swing from the previous season with the new core, going 66-16 on the way to a 4-1 defeat of the Lakers. Though the team only won 1 championship, they were strong contenders and threw down a gauntlet that young LeBron couldn't get through.
 						</p>
 					</div>
 					<div class='step' data-index='30'>
@@ -272,23 +309,32 @@
 							<img class="small-image" src="../assets/images/logos/NBA/Los Angeles Lakers Alt.png"></img>
 						</div>
 						<br>
+						<h1 id="header-30"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							In 2010, <a href="https://en.wikipedia.org/wiki/LeBron_James">LeBron James</a> helped usher in an era of player empowerment through his controversial live program known as <a href="https://en.wikipedia.org/wiki/The_Decision_(TV_special)">The Decision</a>. In the live show, he announced he'd be moving on from his hometown-adjacent Cleveland Cavaliers to join Dwayne Wade and Chris Bosh in Miami.<br><br>The event and the actual decision turned LeBron into a league-wide villain at the time. Yet this move, along with the decision to start signing <a href="https://www.cleveland.com/cavs/2016/07/lebron_james_the_godfather_of.html">one-and-ones</a> (one guaranteed contract year, one player option year) in the prime of his career vastly increased LeBron's leverage in the team-building and decision-making processes.<br><br> It also allowed his earnings to grow with the increasing salary cap of the league. Further, it provided a model of leverage which other superstars like Kawhi Leonard and Kevin Durant have since used to their advantage.<br><br>Aside from LeBron's substantial impact on the economics of the league, in 2011, LeBron kicked off an incredible run of <a href="https://www.cbssports.com/nba/news/a-timeline-of-lebron-james-eight-consecutive-nba-finals-appearances/">8 straight championship appearances</a> between the Miami Heat (2011-2014) and <a href="https://en.wikipedia.org/wiki/Cleveland_Cavaliers">Cleveland Cavaliers</a> (2015-2018).<br><br>He won 3 championships during this time, cementing himself in the discussions for greatest-of-all-time by coming back from a 3-1 deficit in the Finals (never done before) to defeat a historically great 73-win (!) Golden State Warriors team. To help seal this title, LeBron delivered the most iconic <a href="https://www.youtube.com/watch?v=-zd62MxKXp8">chase-down block</a> of all-time, rejecting Andre Iguodala's fast break attempt in an incredible, athletic feat.<br><br>That Cleveland championship was LeBron's moment of self-actualization. He brought Cleveland its first NBA championship and first championship in <a href="https://www.nbcsports.com/philadelphia/philadelphia-76ers/cavaliers-give-city-cleveland-first-championship-52-years">over 50 years</a>. The man had achieved sports immortality.<br><br>Nevertheless, the overwhelming talent of the Warriors' crew eventually drove LeBron out of Cleveland and into Los Angeles as he sought greener pastures to enter the final stages of his prime.<br><br>At the moment, with <a href="https://en.wikipedia.org/wiki/Anthony_Davis">Anthony Davis</a> as his number two, LeBron is experiencing an amazing resurgence. He leads the league in <a href="https://www.nba.com/article/2020/01/03/lebron-james-passing-assists-final-frontier">assists</a> and arguably leads the best team in the NBA. When (if?) the season returns, LeBron's search for a 4th title will be the dominant narrative to watch.
 						</p>
 					</div>
 					<div class='step' data-index='31'>
 						<img class="large-image" src="../assets/images/logos/NBA/Golden State Warriors.png"></img>
 						<br>
+						<h1 id="header-31"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							While LeBron was revolutionizing the league through sheer force of personality and will, the <a href="https://en.wikipedia.org/wiki/Golden_State_Warriors#2014%E2%80%932019:_The_Dynasty">Golden State Warriors</a> were building an entirely unique brand of basketball. Led by the two greatest shooters of all time, a strong focus on analytics and a coach uniquely suited to pull the team together, the Warriors ascended to unprecedented heights through <a href="https://medium.com/park-recommendations/sprawlball-a-visual-tour-of-the-new-era-of-the-nba-kirk-goldsberry-80e083931989">sprawlball</a>.<br><br><a href="https://en.wikipedia.org/wiki/Stephen_Curry">Steph Curry</a> was the heralded leader of this revolution. His <a href="https://www.youtube.com/watch?v=OjA4cNfT_xQ&list=PL5vrrPDym6FR0pFHV6-Sng8ISVVfzag6k&index=53&t=0s">uncanny threeball accuracy</a> from every conceivable angle and any possible distance unleashed new dimensions to the game. His team could play small lineups, highly focused on defensive switchability, and much more mobile without a traditional lumbering center clogging the lane.<br><br>This innovation, brought about by not only having Steph but also <a href="https://en.wikipedia.org/wiki/Klay_Thompson">Klay Thompson</a> on the perimeter, paved the way to modern NBA offenses that focus almost exclusively on high-value 3-point shots and 2-pointers at the rim. Ironically, the Warriors themselves maintained a significant mid-range shot ability, staying more balanced than later, less successful iterations of this offensive style (e.g. Houston Rockets).<br><br>On the court, the core of Steph, Klay and <a href="https://en.wikipedia.org/wiki/Draymond_Green">Draymond Green</a> went to back-to-back Finals, winning the first, but losing the second in a shocking defeat. You might not think a 73-win team with a 3-1 lead in the Finals would need help, but that's exactly where LeBron pushed the Warriors.<br><br>After that first defeat, the Warriors recruited and signed <a href="https://en.wikipedia.org/wiki/Kevin_Durant">Kevin Durant</a>, leading to a dominant team that wiped out LeBron's Cavs in 2017 and 2018. Ultimately, only injuries and clashes of ego could undo the success of this team.<br><br>With Durant making it clear taht 2019 was his last, the team started to splinter. Serious injuries to Durant and Klay finally derailed the team, leading to its 2019 Finals loss. Unfortunately the unlucky streak continued in the 2019-'20 season with Steph breaking his hand, leading to a sort of "lost season". Nevertheless, the Warriors are well positioned for a 2021 effort to reclaim their throne.
 						</p>
 					</div>
-					<div class='step' data-index='32'>
+					<div class='step-outro' data-index='32'>
 						<img class="large-image" src="../assets/images/logos/NBA/Toronto Raptors.png"></img>
 						<br>
+						<h1 id="header-32"></h1>
 						<p>
-							In 1947, the Philadelphia Warriors won the 1st championship of what was then called the Basketball Association of America (BAA). <br><br> They'd also make the Finals in 1948, but lose 4 - 2 to a gritty Baltimore Bullets team.  A few years later, the league would rebrand as the NBA.
+							The most recent champions of the NBA hail from the same country that <a href="https://en.wikipedia.org/wiki/James_Naismith">invented the sport</a>. The <a href="https://en.wikipedia.org/wiki/Toronto_Raptors">Toronto Raptors</a>, after several years of defeat at the hands of LeBron in various jerseys, shook things up.<br><br> They fired an accomplished head coach, traded a known asset in <a href='https://en.wikipedia.org/wiki/DeMar_DeRozan'>DeMar DeRozan</a> for a very unknown asset (healthwise) in <a href="https://en.wikipedia.org/wiki/Kawhi_Leonard#2017%E2%80%9318:_Injury-plagued_season">Kawhi Leonard</a>.<br><br>And the gamble paid off. They bought one clear year of title contention, capitalized on it, and brought Toronto its first championship.They kept their young core, their winning culture, and are again in contention for the 2020 title.<br><br><span class="desktop-text">That last title brings us up to date with the current season, on pause due to COVID-19, and hopefully returning in the next couple months. In the meantime, keep scrolling below to find a fully interactive version of this historical graph!</span>
 						</p>
+					</div>
+					<div class="interactive-div", id="interactive-div">
+						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<div class='step' data-index='33'></div>
+						<div class='step' data-index='34'></div>
+						<div class='step' data-index='35'></div>
 					</div>
 				</article>
 
@@ -296,26 +342,7 @@
 
 				<!-- step text -->
 			</div>
-		</section>
-		
-		<br id="appendix">
-		<div class='appendix'>
-			<h1>Appendix</h1>
-        	<h2>Origins</h2>
-			<p>The long <a href="https://www.wnba.com/news/history-of-womens-basketball/">history of women’s involvement in basketball</a> dates back to the origins of the sport itself. In 1892, in tandem with basketball’s invention, <a href="https://jwa.org/encyclopedia/article/berenson-senda">Senda Berenson</a> introduced the game to Smith College in Massachusetts. Slowly, intercollegiate competition grew in the West at Cal-Berkeley and Stanford, in the South at <a href="https://www.jstor.org/stable/43609682?seq=1">Bennett College</a> and Sophie Newcomb College, in the Northeast at Bryn Mawr and Vassar, and in the Midwest at the University of Nebraska and Kanasas State.</p>
-
-			<p>Much of the early growth of the game also took place in high schools. Already in 1896, Chicago Austin High School and Oak Park played the <a href="https://womenshoopsblog.wordpress.com/womens-basketball-timeline-since-1891/">first high school game</a>. By 1910, the <a href="https://www.blackfives.org/december-is-black-womens-basketball-history-month/">New York Girls</a>, the first all-black, all-female high school team, was founded and won a state championship. In 1924 came another important basketball moment: the sport's first 100-point game. Except it wasn't just a 100-point game. It was a <a href="http://www.espn.com/espn/page2/story?page=list/060124">156 point outburst</a> by Marie Boyd in an overall demolition of 163-3. Absolutely merciless.</p>
-
-			<h2>Industrial Teams &amp; Barnstorming</h2>
-			<p>In the 1910's and 20's, quasi-professional industrial teams sponsored by corporations began to emerge. It was great publicity to have a winning team, and by 1923 there were enough teams to have a formal tournament culminating in the <a href="https://en.wikipedia.org/wiki/Edmonton_Grads#North_American_Underwood_Trophy">Underwood Trophy</a>. The Edmonton Grads (i.e. the Commercial Graduates) consistently dominated this league and all other competition. Between 1915 and 1940, the team went an astonishing 502-20, winning against men's teams, universities, industrial teams, and Olympic competition.</p>
-
-			<p>In this era, overcoming both gender discrimination and racism, some of the earliest professional basketball clubs founded were the all-black <a href="https://originalpeople.org/top-25-african-americans-who-pioneered-the-integration-of-pro-basketball/">Chicago Romas</a> (1920) and <a href="https://www.blackfives.org/all-hail-the-philadelpha-tribune-girls-happy-birthday-ora-mae-washington/">Philadelphia Tribunes</a> (1931). The star players of each team, Ora Mae Washington and Isadore Channels, were excellent athletes who were also champion tennis players of the era. Notably, the Romas, who competed against men's and women's teams, didn't lose a single game during a six year span from 1939 to 1945.</p> 
-
-			<p>Also founded in the 1930’s and 40’s, all-white barnstorming professional teams like the <a href="https://arktimes.com/news/cover-stories/2012/11/07/without-the-all-american-red-heads-there-would-be-no-wnba">All American Red Heads</a> (1936) and <a href="https://www.kuaf.com/post/womens-basketball-today-has-arkansas-connection#stream/0">Arkansas Travelers</a> (1949) played in arenas and literal barns across the country. They each played exclusively against men’s teams, beating them 70% to 80% of the time. The Travelers, led by early basketball icon <a href="https://en.wikipedia.org/wiki/Hazel_Walker">Hazel Walker</a> would continue to compete through the 1960's.</p>
-
-			<h2>Professional Leagues</h2>
-			<p>It took the better part of a century though for the first professional league, the <a href="https://en.wikipedia.org/wiki/Women%27s_Professional_Basketball_League">Women's Professional Basketball League</a> (WBL), to form in 1978. While it only lasted through 1983 (unpaid salaries rightfully led to player protests and the league’s closure), it set the stage for professional leagues to follow in the U.S. It led to the <a href="https://en.wikipedia.org/wiki/Women%27s_American_Basketball_Association">Women’s American Basketball Association</a> (WABA), which had on-and-off seasons between 1984 and 1995. Ultimately, interest in the sport led to the founding of the WNBA in 1996 and its first season in 1997. With it began the most recent and powerful chapter of professional women’s basketball in the United States.</p>
-		</div>
+		</section>		
         <script src="{{basepath}}assets/scripts/d3-delaunay.min.js"></script>
         <script src="{{basepath}}assets/scripts/d3.v5.js"></script>
         <script src="{{basepath}}assets/scripts/typeahead.bundle.js"></script>
@@ -328,9 +355,3 @@
 </body>
 
 </html>
-
-<svg x=0 y=0 width=55 height=55>
- <filter id="grayscale">
-  <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
- </filter>
-</svg>

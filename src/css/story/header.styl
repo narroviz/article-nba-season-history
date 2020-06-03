@@ -5,7 +5,7 @@ header
 	left 0
 	width 100%
 	background-color $white
-	font-family $sans-display
+	font-family 'Raleway'
 
 	a.logo
 		display block
@@ -67,8 +67,8 @@ header.is-sticky
 		transform translateX(-100%)
 		height 100vh
 		width 100%
-		max-width 19rem
-		padding 2rem 0.5rem
+		max-width min(18rem, 70vw)
+		padding 4rem 0.5rem
 		background-color $off-black
 		color $off-white
 		z-index set-index(overlay)
@@ -79,6 +79,16 @@ header.is-sticky
 		&.is-visible
 			transform translateX(0)
 
+		img
+			color #f4f4f4
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			margin auto
+			width 100px
+			margin-bottom 4.5rem
+
 		a
 			color $off-white
 			border-bottom 1px solid $off-white
@@ -86,7 +96,8 @@ header.is-sticky
 				color $green-logo
 		p
 			color $off-white
-			margin-left 2.5rem
+			margin-top 0
+			margin-left 1.5rem
 
 		.menu__links
 			display flex
@@ -95,11 +106,12 @@ header.is-sticky
 			+mq('bp-4')
 				flex-direction column
 			li
-				font-family $sans-display
+				font-family 'Avenir'
 				font-weight 700
 				text-transform uppercase
 				margin-bottom 0.5em
-				margin-left 1.5em
+				margin-left 1em
+				padding-right 4rem
 				set-type-size(large)
 				+mq('bp-3')
 					set-type-size(x-large)

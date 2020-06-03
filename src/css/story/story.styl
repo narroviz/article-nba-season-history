@@ -1,8 +1,9 @@
 @font-face
-    font-family $sans
+    font-family Avenir
 
 body
-    padding 5em
+    padding max(5vw, 1vw); 
+    padding-bottom 0em
 
 .wrapper
     position relative
@@ -15,7 +16,7 @@ body
     opacity 0
 
 .bounds-background
-    fill white
+    fill #FF00FF11
 
 .rect
     opacity 0.25
@@ -48,27 +49,30 @@ body
     fill transparent
 
 .autocomplete
-    position relative
-    margin-right 10rem
-    margin-left 10rem
-    display block
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -91%)
+    font-size: 28px
+    pointer-events none
+    z-index 10000
 
 .typeahead
-    width 105px
+    width 200px
     position relative
     opacity 0
     border none
-    z-index 0
+    z-index 10000
 
 input[type=text]
-    font-size 1.2rem
+    font-size 28px
+    font-family 'Raleway'
     background-color transparent
-    width 100%
+    width 355px
     opacity 1
     outline-width 0
     text-align center
-    border none
-    border-bottom 3px solid gray
+    border-bottom none
 
 .typeahead.dropdown-menu, span.twitter-typeahead .tt-menu
     min-width 100%
@@ -101,12 +105,15 @@ span.twitter-typeahead .tt-suggestion.tt-cursor:hover
     background-color #EEEEEE
     color #4285F4
 
+
+
+
 #scrolly-side .scrolly
     display flex
     margin-right 0rem
     margin-left 0rem
     background-color transparent
-    padding 1rem
+    padding min(5vw, 1rem)
 
     & > *
         flex 1
@@ -115,11 +122,57 @@ span.twitter-typeahead .tt-suggestion.tt-cursor:hover
         max-width 15rem
 
         .step-intro
-            min-height 10vh
+            min-height 50vh
+            margin-bottom 3rem
+            background-color transparent
+
+        .step-outro
+            min-height 50vh
+            margin-bottom 0rem
+            background-color transparent
+            transition background-color 250ms ease-in-out
+            &:last-of-type
+                margin-bottom 0
+            &.is-active
+                background-color $secondary
+            .row 
+                display flex
+                max-height 30%
+
+            .large-image
+                margin auto
+                object-fit contain
+                max-height 8rem
+                max-width 12rem
+
+
+            .small-image
+                object-fit contain
+                margin 2%
+                max-width 30%
+                max-height 5rem
+
+            p
+                margin 0
+                font-family Avenir
+                color black
+            h1
+                margin 0
+                text-align center
+                font-weight 400
+                color black
+                font-size 24px
+                font-family "Avenir"
+            h2
+                margin 0
+                text-align center
+                font-weight 400
+                color black
+                set-type-size(large)
 
         .step
-            min-height 100vh
-            margin-bottom 1rem
+            min-height 50vh
+            margin-bottom 3rem
             background-color transparent
             transition background-color 250ms ease-in-out
             &:last-of-type
@@ -153,7 +206,8 @@ span.twitter-typeahead .tt-suggestion.tt-cursor:hover
                 text-align center
                 font-weight 400
                 color black
-                set-type-size(large)
+                font-size 24px
+                font-family "Avenir"
             h2
                 margin 0
                 text-align center
@@ -169,6 +223,14 @@ span.twitter-typeahead .tt-suggestion.tt-cursor:hover
         margin 0
         top 14vh
         left 0
+
+.interactive-wrapper
+    position fixed
+    overflow scroll
+    right 3rem
+    height 100vh
+    width 19rem
+    pointer-events none
 
 .historical-path
     stroke-opacity 1
@@ -228,36 +290,70 @@ button.toggle:focus
     margin-right: -50%;
     transform: translate(-50%, -150%)
     font-size: 28px
+    border-bottom 2px solid gray
 
 .appendix
-    margin-left 10rem
-    margin-right 10rem
-    padding 1rem 1rem 3rem 1rem
+    font-family "Avenir"
+    margin-top 0
+    margin-left min(5vw, 1rem)
+    margin-right min(5vw, 1rem)
+    margin-bottom 0
 
 .appendix p
-    font-size 12px
-
-.appendix h2
-    font-size:16px
-
-.win-pct-label
-    vertical-align middle
-
-.bottom-text
-    width 40%
-    height 80px
-    position: absolute;
-    background-color: white
-    box-shadow 0 0 7px 7px rgba(0, 0, 0, .2)
-    opacity 90%
-    top: 85%
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-    z-index: 999;
-    border-radius 5px
-    text-align center
-    padding 7px
-    font-family Avenir
     font-size 16px
 
+.appendix h2
+    font-weight bold
+    font-size:18px
+
+.win-pct-label
+    font-family: 'Raleway';
+    vertical-align middle
+
+.num-games-label
+    font-family: 'Raleway';
+    vertical-align middle
+
+.year-label
+  font-family 'Raleway'
+  font-weight 200px
+
+.tooltip
+    width 8.5rem
+    font-family "Avenir"
+    opacity 0
+    left 0
+    display block
+    position absolute
+    text-align center
+    padding: 0.4em 0.6em 0.4em 0.6em;
+    background: #fff;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 6px;
+
+.tooltip-year
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid gray
+
+.tooltip-record
+    text-align center
+    margin-bottom 0.2em
+
+.tooltip-win-pct
+    text-align center
+
+#win-pct-label
+    font-size 16px
+    color #585858
+
+#record-label
+    font-size 16px
+    color #585858
+
+.mobile-text
+    visibility hidden
